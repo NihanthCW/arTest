@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-332815-86", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="Global forests soaking up carbon at quickening rate | NCAR &amp; UCAR News" />
+<link rel="shortcut icon" href="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/favicon.ico" />
+<link rel="canonical" href="https://news.ucar.edu/132654/global-forests-soaking-carbon-quickening-rate" />
+<link rel="icon" sizes="16x16" href="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/favicon-16x16.png" />
+<meta name="google-site-verification" content="WColASQtXu3yj2gC2cnYfJDtrcyBW3Cyl5YtO6_7DZs" />
+<link rel="icon" sizes="32x32" href="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/favicon-32x32.png" />
+<link rel="icon" sizes="96x96" href="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/favicon-96x96.png" />
+<link rel="apple-touch-icon" href="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/apple-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/apple-icon-180x180.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="NCAR News" />
+<link rel="manifest" href="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/manifest.json" />
+<meta name="application-name" content="NCAR News" />
+<meta name="msapplication-square150x150logo" content="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/ms-icon-150x150.png" />
+<meta name="msapplication-square310x310logo" content="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/ms-icon-310x310.png" />
+<meta name="msapplication-square70x70logo" content="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/app-favicons/news/ms-icon-70x70.png" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="revision" href="/132654/global-forests-soaking-carbon-quickening-rate" />
+
+    <title>Global forests soaking up carbon at quickening rate | NCAR &amp; UCAR News</title>
+    <link rel="stylesheet" href="/sites/default/files/css/css_0EdUsuo5WBQQDVZS7jIlTK_m4jppiqAGfDapiXsAAeA.css?ppajxm" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_2NkP_90gHwlPrNasDYf-xPDKhTEW82hQCELbCMC4FWA.css?ppajxm" media="all" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Poppins:400,600,700" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_t5ywdTAnhK8WUO0RO-cHBwAeMkuPTGk-rvpm-Rd-lNQ.css?ppajxm" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="//script.crazyegg.com/pages/scripts/0078/5653.js" async></script>
+
+  </head>
+  <body id="body" data-toggler="nav-open" class="no-banner with-sidebar news path-node page-node-type-article">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="content-wrapper">
+    <header>
+        <div data-sticky-container>
+            <div data-sticky data-options="marginTop:0;stickyOn:small;" data-top-anchor="main-content">
+                  <div class="region region-header">
+    <div id="block-ucaralertblock" class="block block-ucar-alert block-ucar-alert-block">
+  
+    
+      <div class="callout large primary" data-alert data-closable data-changed="Mon, 04/01/2019 - 10:46">
+  <div class="alert-box">
+    <button class="close-button" data-close>&times;</button>
+    <i class="fa fa-info-circle"></i>
+    <span><p>NCAR Mesa Lab and Marshall Field Site will be closed Tuesday, April 2 from 5:30 to 11:30 p.m.</p>
+</span>
+    <span>&nbsp;<a href="https://www.ucar.edu/alerts">View more information.</a></span>
+  </div>
+</div>
+  </div>
+<div id="block-news-headerblock" class="block block-koru-blocks block-header-block">
+  
+    
+      
+<div class="title-bar hide-for-mlarge">
+  <div class="grid-container mobile-logo">
+    <div class="grid-x grid-padding-x grid-margin-y align-middle">
+      <h1 class="cell small-3 medium-2 acronym">
+          <img src="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/logo-ncar-active.png" alt="NCAR"/>
+  <img src="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/logo-ucar-active.png" alt="UCAR"/>
+        <span class="show-for-sr"></span>
+      </h1>
+      <h1 class="cell small-8 medium-8 description">
+        <a href="https://news.ucar.edu/" title="NCAR &amp; UCAR News">
+          NCAR &amp; UCAR News
+        </a>
+      </h1>
+    </div>
+  </div>
+  <button class="fa fa-bars hide-for-print" type="button" id="menu-button" data-toggler="fa-minus-circle fa-bars" data-toggle="body main-menu menu-button top-bar"></button>
+</div>
+
+<div class="top-bar align-top" id="top-bar">
+  <div class="grid-x align-bottom">
+    <div class="cell mlarge-4 show-for-mlarge top-bar-title logo-wrapper">
+      <div class="grid-x align-middle">
+        <div class="cell mlarge-4 xlarge-3 acronym-wrapper">
+            <h1>
+    <a href="https://ncar.ucar.edu" title="NCAR Home">
+      <img src="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/logo-ncar-active-large.png" alt="NCAR"/>
+      <span class="show-for-sr">NCAR</span>
+    </a>
+  </h1>
+  <h1>
+    <a href="https://www.ucar.edu" title="UCAR Home">
+      <img src="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/logo-ucar-active-large.png" alt="UCAR"/>
+      <span class="show-for-sr">UCAR</span>
+    </a>
+  </h1>
+        </div>
+        <div class="cell mlarge-8 xlarge-9 acronym-definition">
+          <h1><a href="/">NCAR &amp; UCAR News</a></h1>
+        </div>
+      </div>
+    </div>
+    <div class="cell mlarge-8 show-for-mlarge top-bar-menus hide-for-print" id="main-menu" data-toggler="show-for-mlarge">
+      <div class="grid-y">
+        <nav class="cell mlarge-order-2 main-nav">
+          <ul class="menu icons icon-left" data-responsive-menu="accordion mlarge-dropdown">
+                          <li >
+                <a href="/news"><i class="fa fa-chevron-down"></i>Home</a>
+                              </li>
+                          <li >
+                <a href="/comms-office"><i class="fa fa-chevron-down"></i>Comms Office</a>
+                                  <ul class="menu">
+                    <li>
+                      <a href="/comms-office">Overview</a>
+                      <p>Learn about our resources for journalists, our brand guidelines &amp; how to contact our staff.</p>
+                    </li>
+                                          <li><a href="/journalists">For journalists</a></li>
+                                          <li><a href="/brand">Brand standards</a></li>
+                                          <li><a href="/comms-office/nsf-acknowledgment">NSF acknowledgment</a></li>
+                                      </ul>
+                              </li>
+                          <li >
+                <a href="https://ncar.ucar.edu"><i class="fa fa-chevron-down"></i>NCAR</a>
+                              </li>
+                          <li >
+                <a href="https://www.ucar.edu"><i class="fa fa-chevron-down"></i>UCAR</a>
+                              </li>
+                      </ul>
+        </nav>
+        <div class="cell mlarge-order-1 utility-wrapper">
+          <div class="utility-menu">
+            <div class="utility-menu-primary grid-x">
+              <ul>
+                  <li><a href="https://www.ucar.edu/our-structure" target="_blank">Our Structure</a></li>
+                <li><a href="https://staff.ucar.edu/for-staff" target="_blank">For Staff</a></li>
+                <li  class="highlighted" ><a href="https://www.ucar.edu/alerts">Alerts</a></li>
+              </ul>
+              <div class="input-group header-default-search">
+                <form class="search-form" role="search" method="get" action="/search">
+                  <input class="input-group-field" type="text" name="q" placeholder="SEARCH ..." value="" aria-label="Enter Search Text">
+                  <div class="input-group-button">
+                    <button type="submit" class="button-search" value="Submit" aria-label="Submit Search"><i class="fa fa-search"></i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="utility-mobile-wrapper">
+            <div class="header-default-search-mobile">
+              <form class="searchbox" role="search" method="get" action="/search">
+                <input type="text" placeholder="Search..." name="q" class="searchbox-input" value="">
+                <button type="submit" class="searchbox-submit" value="GO"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+            <ul class="utility-parents">
+              <li><a href="https://ncar.ucar.edu">NCAR Home</a></li>
+              <li><a href="https://www.ucar.edu">UCAR Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  </div>
+
+            </div>
+        </div>
+
+                
+    </header>
+    <div class="body-content" id="main-content">
+        
+
+        <section class="panel primary-content">
+            <div class="grid-x align-center">
+                <div class="cell  medium-8 large-9 ">
+                      <div class="region region-content">
+    
+<div id="block-news-content" class="block block-system block-system-main-block">
+  
+    
+      <article class="content">
+  <div class="post">
+    <div class="grid-y details">
+      <div class="cell content">
+        <h1><span class="field field--name-title field--type-string field--label-hidden">Global forests soaking up carbon at quickening rate</span>
+</h1>
+                  <h2 class="subtitle">Increased uptake not keeping pace with fossil fuel emissions</h2>
+                <div class="grid-x post-stamp">
+          <div class="cell small-7">
+            <p class="date heading-xsmall-normal">
+                              Feb 25, 2019
+                                            -
+                                            by Laura Snider
+                          </p>
+          </div>
+          <div class="cell small-5 text-right addthis_sharing_toolbox"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <figure class="featured-image">
+      <img src="/sites/default/files/article/image/2019-02/Trop%20Forest%20Main.jpg" alt="A stark line between rain forest and agricultural land in Brazil">
+              <figcaption class="excerpt ">
+                                <p>An aerial shot shows the contrast between forest and land that has been cleared for agricultural use near Rio Branco, Acre, Brazil. Despite widespread deforestation in the tropics, the remaining forests are taking up increasingly more carbon, according to a new study. (Image: Kate Evans/Center for International Forestry Research)</p>
+                  </figcaption>
+          </figure>
+  
+  <p>The world's forests are taking up increasingly more carbon, partially offsetting the carbon being released by the burning of fossil fuels and by deforestation in the tropics, according to a new synthesis of model simulations.</p>
+<p>The findings, published in the journal <em>Biogeosciences</em>, suggest that forests are growing more vigorously, and therefore, locking away more carbon. Even so, the concentration of heat-trapping carbon dioxide in the atmosphere is still on the rise.</p>
+<p>"Every decade, Earth’s forests are taking up carbon faster than the previous decade," said Britton Stephens, a scientist at the National Center for Atmospheric Research (NCAR) and a co-author of the study. "The same is true of the oceans. But even together, the ocean and the land are not keeping up with industrial carbon emissions, and the global concentration of carbon dioxide in the atmosphere is increasing at an accelerating rate."</p>
+<p>The increased plant growth in global forests could be due to a variety of factors, including higher concentrations of carbon dioxide in the atmosphere, warmer temperatures, or increased availability of nitrogen.</p>
+<p>The new study also contributes to a mounting body of evidence that tropical forests might take up more carbon — and northern temperate forests might take up less carbon — than many scientists once thought.</p>
+<p>"The forests we aren't cutting down in the tropics are taking up a lot of carbon," Stephens said.</p>
+<p>The study was authored by an international group of researchers, led by NCAR scientist Benjamin Gaubert. The scientists were funded by the National Science Foundation, which is NCAR's sponsor, as well as NASA, the European Union's Copernicus Atmosphere Monitoring Service, Japan's Environment Research and Technology Fund of the Ministry of Environment, Climate Change Canada, and the Canadian Space Agency.</p>
+<p>"This team of scientists has significantly improved our knowledge of how much carbon dioxide gets into the atmosphere," said Sherri Hunt, a program director in the National Science Foundation's Division of Atmospheric and Geospace Sciences. "Understanding what factors control the amount of this important greenhouse gas is critical for predicting future climate conditions and estimating the contribution of human actions."</p>
+<h3><strong>A convergence of models</strong></h3>
+<p>The new study relies on a synthesis of results from 10 different "inverse transport models," which are atmospheric models run in reverse. To use them, scientists input the "results" — the actual levels of atmospheric carbon dioxide measured all over the world during the past several decades — and force the model to predict how much carbon dioxide must have been emitted and reabsorbed in different parts of the Earth system to match the measurements.</p>
+<p>This effort is the third inverse transport model comparison project of this scale. In the first comparison, published in 2002, the model results diverged from one another significantly, but the average pointed toward the presence of a large carbon sink in the Northern Hemisphere outside the tropics.</p>
+<p>Since the original comparison, the model results have begun to come together.</p>
+<p>"We find that the models now agree a lot better with each other and with independent aircraft data," said Gaubert. "Collectively, they are telling us that both the tropics and the northern temperate region are taking up more carbon than in the past, but the amount being taken up by intact tropical forests is a bigger surprise."</p>
+<p>The remaining disagreement among the models is mostly related to uncertainty about how much carbon is being emitted into the atmosphere by the burning of fossil fuels. Previously, the uncertainties most affecting model spread were related to sparse observations and the physics contained in the models themselves.</p>
+<p>"Despite the fact that all the models we used in the analysis are built differently, they come to similar solutions, which reflects our increased understanding of how carbon moves through the Earth system," said Gaubert. "To further zero in on where the carbon is going, we need better inventories of society's carbon emissions to feed into the models."</p>
+<p>The new study finds that, averaged over the past decade, the carbon flux in the tropics is about zero — meaning the additional amount of carbon being released by deforestation (an estimated 1.5 billion metric tons a year) is being compensated for by increased uptake in the remaining forest. This expanded capacity of intact forests to act as a carbon sink suggests that the additional carbon dioxide in the air may be fertilizing those forests, allowing them to grow and store carbon more quickly, though changes in precipitation, temperature, and deforestation could also be playing important roles.</p>
+<p>The researchers said it isn't clear how long Earth's land areas will be able to keep increasing carbon uptake in the face of ongoing deforestation and continued emissions of fossil fuels, even with the help of fertilization.</p>
+<p>"The limits of carbon fertilization aren't yet well understood," Stephens said. "But we do know that fossil fuel emissions are outpacing Earth's ability to take up carbon, and the gap may widen in the future."</p>
+
+  
+      <div class="field field--name-field-article-footer field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item"><h3>About the article</h3>
+
+      <div class="field field--name-field-footer-articles-items field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item"><p>
+<strong>Title: </strong><a href="https://www.biogeosciences.net/16/117/2019/bg-16-117-2019-assets.html">Global atmospheric CO2 inverse models converging on neutral tropical land exchange, but disagreeing on fossil fuel and atmospheric growth rate</a>
+<br/>
+<strong>Authors: </strong>Benjamin Gaubert, Britton B. Stephens, Sourish Basu, Frédéric Chevallier, Feng Deng, Eric A. Kort, Prabir K. Patra, Wouter Peters, Christian Rödenbeck, Tazu Saeki, David Schimel, Ingrid Van der Laan-Luijkx, Steven Wofsy, and Yi Yin
+
+    <br/>
+    <strong>Journal: </strong><em>Biogeosciences</em>
+</p></div>
+          </div>
+  
+</div>
+          </div>
+  
+
+  <p><a class="cta-link large dark-blue-on-gray back-button" href="/">See all News</a></p>
+</article>
+  </div>
+
+  </div>
+
+                </div>
+
+                                    <div class="cell medium-4 large-3 sidebar">
+                          <div class="region region-sidebar">
+    <div id="block-articlesidebar" class="block block-news-blocks block-article-sidebar">
+  
+    
+      
+<div class="component article-details">
+  <h5>Contact</h5>
+  <p>
+    <a href="mailto:hosansky@ucar.edu"><span class="term">David Hosansky</span></a><br>
+    Media Relations Manager<br>
+    303-497-8611
+  </p>
+
+    <h5>Topics</h5>
+  <p class="term-list">
+          <a href="/?topic=2#news">
+        <span class="term">Climate</span><span class="comma">,</span>
+      </a>
+      </p>
+  
+      <h5>Tags</h5>
+    <p class="term-list">
+              <a href="/?tag=11#news">
+          <span class="term">Chemistry</span><span class="comma">,</span>
+        </a>
+              <a href="/?tag=27#news">
+          <span class="term">News Release</span><span class="comma">,</span>
+        </a>
+              <a href="/?tag=18#news">
+          <span class="term">Land</span><span class="comma">,</span>
+        </a>
+          </p>
+  </div>
+  </div>
+
+
+<div class="views-element-container component related-posts related-links block block-views block-views-blockrelated-news-block-1" id="block-views-block-related-news-block-1">
+    
+            <h3 class="center">Related News</h3>
+        
+            <div><div class="view view-related-news view-id-related_news view-display-id-block_1 js-view-dom-id-8b675277a6b7548b13f8d13d15e38891044f7d5593a3c27b46aa6702bbd0a7d9">
+  
+    
+      
+      <div class="view-content">
+      <div>
+  
+  <ul class="grid-x vertical menu icons icon-left">
+
+          <li class="cell"><div class="views-field views-field-field-article-publication-date"><div class="field-content"><a href="/132656/tweets-show-how-we-normalize-changing-climate" class="align-middle">
+      <i class="fa fa-chevron-circle-right"></i>
+      <div class="inner excerpt">
+          <p>Tweets show how we normalize a changing climate</p>
+          <span class="date"><time datetime="00Z" class="datetime">Mon, 02/25/2019 - 12:00</time>
+</span>
+      </div>
+    </a></div></div></li>
+          <li class="cell"><div class="views-field views-field-field-article-publication-date"><div class="field-content"><a href="/132651/noaa-and-ncar-partner-new-state-art-us-modeling-framework" class="align-middle">
+      <i class="fa fa-chevron-circle-right"></i>
+      <div class="inner excerpt">
+          <p>NOAA and NCAR partner on new, state-of-the-art U.S. modeling framework</p>
+          <span class="date"><time datetime="00Z" class="datetime">Thu, 02/07/2019 - 12:00</time>
+</span>
+      </div>
+    </a></div></div></li>
+          <li class="cell"><div class="views-field views-field-field-article-publication-date"><div class="field-content"><a href="/132649/major-northeastern-snowstorms-expected-continue-climate-change" class="align-middle">
+      <i class="fa fa-chevron-circle-right"></i>
+      <div class="inner excerpt">
+          <p>Major northeastern snowstorms expected to continue with climate change</p>
+          <span class="date"><time datetime="00Z" class="datetime">Wed, 01/23/2019 - 12:00</time>
+</span>
+      </div>
+    </a></div></div></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+                    </div>
+                            </div><!-- main-content row -->
+        </section>
+
+        
+    </div><!--/ .page-wrap -->
+    <footer>
+          <div class="region region-footer">
+    <div id="block-news-footerblock" class="block block-koru-blocks block-footer-block">
+  
+    
+      <div class="panel">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="cell small-6 medium-12 large-2">
+        <ul class="footer-menu-secondary">
+          <li><a href="https://ucarcareers.silkroad.com/"><i class="fa fa-circle-o"></i>Careers</a></li>
+          <li><a href="https://staff.ucar.edu/"><i class="fa fa-circle-o"></i>Staff Directory</a></li>
+          <li><a href="/sitemap"><i class="fa fa-circle-o"></i>Sitemap</a></li>
+            <li><a href="https://www.ucar.edu/who-we-are/contact-us"><i class="fa fa-circle-o"></i>Contact</a></li>
+          <li><a href="https://www.ucar.edu/who-we-are/ethics"><i class="fa fa-circle-o"></i>Reporting a concern</a></li>
+          <li><a href="https://staff.ucar.edu/for-staff"><i class="fa fa-circle-o"></i>For Staff</a></li>
+
+
+          Careers
+
+          Staff Directory
+
+          Sitemap
+
+          Contact
+
+          Reporting a concern
+
+          For Staff
+        </ul>
+      </div>
+      <div class="cell small-6 medium-12 large-7">
+        <div class="grid-x grid-padding-x footer-addresses">
+          <div class="cell medium-4 large-4 footer-address-postal">
+            <h4>Postal Address</h4>
+            <p>PO Box 3000<br>
+              Boulder, CO 80307-3000
+            </p>
+          </div>
+          <div class="cell medium-4 large-5 footer-address-shipping">
+            <h4>Shipping Address</h4>
+            <p>3090 Center Green Dr.<br>
+              Boulder, CO 80301
+            </p>
+          </div>
+          <div class="cell medium-4 large-3 footer-address-social">
+            <h4>Follow Us</h4>
+            <div class="grid-x small-up-4 social">
+              <div class="cell"><a href="https://www.facebook.com/ncar.ucar" title="Facebook Icon"><i class="fa fa-facebook-square"></i></a></div>
+                                  <div class="cell"><a href="https://twitter.com/NCAR_Science" title="Twitter Icon"><i class="fa fa-twitter-square"></i></a></div>
+                              <div class="cell"><a href="https://youtube.com/ncarucar" title="YouTube"><i class="fa fa-youtube"></i></a></div>
+              <div class="cell"><a href="https://instagram.com/ncar_ucar" title="Instagram"><i class="fa fa-instagram"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cell large-3 footer-subscribe">
+        <h4>Subscribe to News</h4>
+        <div class="newsletter-signup">
+          <!-- Begin MailChimp Signup Form -->
+          <div id="mc_embed_signup">
+            <form action="https://ucar.us4.list-manage.com/subscribe/post?u=289033ba2718c3aa3d2b2e76f&amp;id=80502e816e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required aria-label="Enter your email address to subscribe to the newsletter">
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_289033ba2718c3aa3d2b2e76f_80502e816e" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button" aria-label="Subscribe to news"></div>
+              </div>
+            </form>
+          </div>
+          <!--End mc_embed_signup-->
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x footer-menu-tertiary">
+      <div class="cell">
+        <small>&copy; 2019 UCAR</small>
+        <ul class="menu vertical">
+          <li><a href="https://www.ucar.edu/privacy-policy">Privacy Policy</a></li>
+          <li><a href="https://www.ucar.edu/terms-of-use">Terms of Use</a></li>
+          <li><a href="https://www.ucar.edu/notification-copyright-infringement-digital-millenium-copyright-act">Copyright Issues</a></li>
+          <li><a href="https://nsf.gov">Sponsored by NSF</a></li>
+          <li><a href="https://ncar.ucar.edu">NCAR Home</a></li>
+          <li><a href="https://www.ucar.edu">UCAR Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-x grid-padding-y footer-sponsor">
+  <div class="cell">
+    <div class="grid-container">
+      <div class="grid-x">
+        <div class="cell small-auto medium-10 description">
+          <p>The National Center for Atmospheric Research is sponsored by the National Science Foundation. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the National Science Foundation.</p>
+        </div>
+        <div class="cell small-3 medium-2 mlarge-1 logo">
+          <a href="https://www.nsf.gov/" target="_blank"><img
+                    src="/profiles/custom/ncar_ucar_umbrella/themes/custom/koru/libraries/koru-base/img/footer-logo-nsf.png" alt="National Science Foundation"/></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  </div>
+
+    </footer>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/132654","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"user":{"uid":0,"permissionsHash":"04cc605a6096b1f49866e7eb657406e2d9eb941379f921273e3adc5272d22431"}}</script>
+<script src="/sites/default/files/js/js_xBBpO19V0VUH2O3vc2-VViuEfCkzCuJo1kfB9Mb90A8.js"></script>
+<script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ucarcomm"></script>
+<script src="/sites/default/files/js/js_xZoGa8TxYRnlloz7oIY-xCWhp0ZMCS1XPQFMXT3JoB4.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"cf84d32369","applicationID":"103199941","transactionName":"YANRMRNRChYAV0cICllJcgYVWQsLTkRSBgBoBVIGCVU=","queueTime":0,"applicationTime":20,"atts":"TERSR1tLGRg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
